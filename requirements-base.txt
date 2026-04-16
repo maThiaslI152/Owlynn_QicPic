@@ -1,0 +1,8 @@
+streamlit==1.32.0
+exifread==3.0.0
+pillow==10.2.0
+pillow-heif==0.15.0
+opencv-python-headless==4.9.0.80
+python-dateutil==2.9.0.post0
+timezonefinder==8.2.2
+pyyaml==6.0.3

@@ -37,7 +37,11 @@ def main() -> None:
     providers = get_available_providers()
     preferred = resolve_provider_priority(config["runtime"]["onnx_provider_priority"])
     st.write({"available": providers, "selected_priority": preferred})
-    st.info("Run face/indexing worker natively on macOS for CoreML acceleration.")
+    if "CoreMLExecutionProvider" in providers:
+        st.success("CoreMLExecutionProvider detected (native Apple Silicon runtime).")
+    else:
+        st.warning("CoreMLExecutionProvider not detected. This is expected in Podman/Linux.")
+    st.info("Use native macOS worker env (`requirements-mac.txt`) for face/quality acceleration.")
 
     st.subheader("Index Source Directory")
     source_dir_input = st.text_input("Source directory", value=str(Path.cwd()))
