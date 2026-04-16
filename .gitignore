@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Streamlit
+.streamlit/
+
+# Databases and vectors
+database/catalog.db
+database/vector_store/*
+!database/vector_store/.gitkeep
+
+# Outputs and models
+exports/
+models/
+*.onnx
+sample_media/
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/

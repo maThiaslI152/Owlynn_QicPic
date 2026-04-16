@@ -1,0 +1,24 @@
+database:
+  path: database/catalog.db
+
+indexing:
+  session_gap_hours_with_location: 6
+  session_gap_hours_fallback: 3
+  location_jump_km: 30
+  hash_mode: full_sha256
+  hash_chunk_bytes: 1048576
+  allowed_extensions:
+    - .jpg
+    - .jpeg
+    - .png
+    - .heic
+    - .tif
+    - .tiff
+
+timezone:
+  default: Asia/Bangkok
+
+runtime:
+  onnx_provider_priority:
+    - CoreMLExecutionProvider
+    - CPUExecutionProvider
